@@ -1,30 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./css/styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
     <div class="container">
-        <div class="content">
-            <!-- Nombre del jugador -->
-        <div class="player-name">
-            <h1>¿Cual es tu nombre?</h1>
-            <form class="form-name">
-              <input type="text" placeholder="Nombre" />
-              <button>Confirmar</button>
-            </form>
-          </div>
+      <div class="content">
+        <!-- Nombre del jugador -->
+        <div class="player-name active" id="playerName">
+          <h1>¿Cual es tu nombre?</h1>
+          <form class="form-name" id="formName">
+            <input type="text" placeholder="Nombre" required />
+            <button type="submit">Confirmar</button>
+          </form>
         </div>
         <!-- Empezar juego -->
-        <div class="game-start">
-            <h2>¿Quieres empezar a jugar?</h2>
-            <button class="button">Empezar</button>
+        <div class="game-start" id="gameStart">
+          <h2>¿Quieres empezar a jugar?</h2>
+          <button class="button">Empezar</button>
         </div>
-    </div>     
+        <!-- Condiciones del juego -->
+        <div class="game-rules">
+          <h2>Condiciones del juego</h2>
+          <ul>
+            <li>* El juego tiene un total de 5 nivéles</li>
+            <li>* La respuesta del nivel en el que se encuentra debe ser correcta para avanzar al siguiente nivel</li>
+            <li>* Cada respuesta correcta suma puntos</li>
+            <li>* La cantidad de puntos otorgados es mayor conforme al nivel en que se encuentra</li>
+            <li>
+              * Tiene la opción de retirarse al terminar cada pregunta. Si se retira voluntariamente guardará sus puntos, si continúa y responde mal, perderá
+              sus puntos acumulados
+            </li>
+            <li>
+                * Al contestar correctamente todas las preguntas, obtendrá el acumulado de puntos que lleve hasta el momento y adicionalmente un premio mayor por ganar el juego.
+              </li>
+          </ul>
+          <button class="button">Empezar</button>
+        </div>
+      </div>
     </div>
-</body>
+    <!-- type = "module" es para poder importar js -->
+    <script src="./js/main.js" type="module"></script>
+  </body>
 </html>
