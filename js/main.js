@@ -1,5 +1,6 @@
 // Importar funciones
 import { savePlayerName, showGameRules, showGameStart } from './functions/gameStartFunctions.js';
+import { selectQuestion } from './functions/gameFunctions.js';
 
 //Obtener elementos
 const formName = document.getElementById('formName');
@@ -15,6 +16,7 @@ let playerName = localStorage.getItem('playerName');
 formName.addEventListener('submit', savePlayerName);
 gameStart.addEventListener('click', showGameRules);
 gameRules.addEventListener('click', () => {
-  showGameStart(questionLevel);
+  showGameStart();
+  selectQuestion(questionLevel);
   questionLevel++;
 });
