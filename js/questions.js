@@ -7,12 +7,12 @@ export const levelOne = [
     {
       question: '¿Dónde está ubicada la casa blanca?',
       options: ['París', 'Washington D.C.', 'Roma', 'Cartagena'],
-      answer: 'París',
+      answer: 'Washington D.C.',
     },
     {
       question: '¿Dónde nació Leonardo Da Vinci?',
       options: ['Colombia', 'España', 'Italia', 'Suiza'],
-      answer: 'Colombia',
+      answer: 'Italia',
     },
     {
       question: '¿Cuántos minutos tiene una hora?',
@@ -22,7 +22,7 @@ export const levelOne = [
     {
       question: '¿Cuántos huesos tiene el ser humano?',
       options: ['300', '206', '208', '207'],
-      answer: '300',
+      answer: '206',
     },
   ];
   

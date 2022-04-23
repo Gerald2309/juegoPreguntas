@@ -275,7 +275,8 @@ h2 {
   font-size: 1.2rem;
 }
 
-.withdraw-btn {
+.withdraw-btn,
+.play-again {
   background-color: #fe172a80;
 }
 

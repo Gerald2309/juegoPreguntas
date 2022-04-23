@@ -25,6 +25,11 @@ export const savePlayerName = (e) => {
     let points = document.getElementById('points');
     let gameRules = document.getElementById('gameRules');
   
+    let pointsElement = document.createElement('h2');
+    let pointsText = document.createTextNode(`Puntos: ${localStorage.getItem('points')}`);
+    pointsElement.appendChild(pointsText);
+    points.appendChild(pointsElement);
+  
     gameRules.classList.remove('active');
     game.classList.add('active');
     points.classList.add('active');

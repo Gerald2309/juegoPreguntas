@@ -15,6 +15,7 @@ export const selectQuestion = (level) => {
     case 2:
       question = levelTwo[selectedQuestion];
       reward = 200;
+      break;
     case 3:
       question = levelThree[selectedQuestion];
       reward = 300;
@@ -36,6 +37,10 @@ export const selectQuestion = (level) => {
 export const showSelectQuestion = (question, reward) => {
   let questionContainer = document.querySelector('#game .question');
   let questionOptions = document.querySelector('#game .options');
+
+  questionContainer.innerHTML = '';
+  questionOptions.innerHTML = '';
+
   let questionElement = document.createElement('h2');
   let questionText = document.createTextNode(question.question);
 
@@ -64,6 +69,7 @@ export const checkAnswer = (selectedOption, question, reward) => {
   let buttons = document.getElementById('buttons');
   let nextButton = buttons.querySelector('.next-btn');
   let withdrawButton = buttons.querySelector('.withdraw-btn');
+  let playAgain = buttons.querySelector('.play-again');
 
   let points = parseInt(localStorage.getItem('points'));
   let selectedOptionText = selectedOption.textContent;
@@ -77,7 +83,10 @@ export const checkAnswer = (selectedOption, question, reward) => {
     selectedOption.classList.add('correct');
     buttons.classList.add('active');
     nextButton.classList.add('active');
-    withdrawButton.classList.add('active');
+
+    if (reward != 1000) {
+      withdrawButton.classList.add('active');
+    }
 
     // Almacenar puntos
     localStorage.setItem('points', (points += reward));
@@ -92,7 +101,7 @@ export const checkAnswer = (selectedOption, question, reward) => {
   } else {
     selectedOption.classList.add('wrong');
     buttons.classList.add('active');
-    withdrawButton.classList.add('active');
+    playAgain.classList.add('active');
 
     // Marcar la respuesta que es correcta
     options.forEach((option) => {
