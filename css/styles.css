@@ -6,13 +6,15 @@
 }
 
 body {
+  background-color: #00001a;
+  color: #bcb8db;
   margin: 0;
   padding: 0;
 }
 
 h1,
 h2 {
-  color: #e9e9e9;
+  color: #bcb8db;
   font-size: 35px;
   font-weight: 700;
   margin: 0;
@@ -37,10 +39,10 @@ h2 {
 }
 
 .button {
-  background-color: #e9e9e9;
+  background-color: #242440;
   border: none;
   border-radius: 5px;
-  color: #000;
+  color: #bcb8db;
   cursor: pointer;
   display: inline-block;
   font-size: 1.2rem;
@@ -51,16 +53,22 @@ h2 {
   padding: 0 20px;
   text-align: center;
   text-decoration: none;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease-in-out;
   width: 200px;
+}
+
+.button:hover {
+  transform: scale(1.1);
 }
 
 .player-name,
 .game-start,
-.game-rules {
+.game-rules,
+.game {
   align-self: center;
   border-radius: 5px;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: #14152c;
+  box-shadow: 0 4px 5px 0 rgba(255, 255, 255, 0.2), 0 6px 15px 0 rgba(255, 255, 255, 0.19);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -69,12 +77,14 @@ h2 {
   padding: 1rem;
   pointer-events: none;
   transition: all 0.3s ease-in-out;
-  width: 50vw;
+  min-width: 50vw;
+  max-width: 90vw;
 }
 
 .player-name.active,
 .game-start.active,
-.game-rules.active {
+.game-rules.active,
+.game.active {
   opacity: 1;
   pointer-events: all;
 }
@@ -88,26 +98,32 @@ h2 {
 }
 
 .form-name input {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: #242440;
   border-radius: 5px;
   border: none;
-  color: #e9e9e9;
+  color: #bcb8db;
   font-size: 17px;
   font-weight: 600;
   padding: 5px 10px;
+  transition: all 0.3s ease-in-out;
   width: 60%;
+}
+
+.form-name input:hover {
+  transform: scale(1.1);
 }
 
 .form-name input:focus {
   outline: none;
+  transform: scale(1.1);
 }
 
 .form-name input::placeholder {
-  color: #e9e9e950;
+  color: #bcb8db50;
 }
 
 .form-name button {
-  background-color: #e9e9e9;
+  background-color: #bcb8db;
   border: none;
   border-radius: 5px;
   color: #222;
@@ -115,6 +131,13 @@ h2 {
   font-size: 17px;
   font-weight: 700;
   padding: 5px 10px;
+  transition: all 0.3s ease-in-out;
+  z-index: 2;
+}
+
+.form-name button:hover {
+  opacity: 0.7;
+  transform: scale(1.1);
 }
 
 .game-start button {
@@ -128,8 +151,87 @@ h2 {
 }
 
 .game-rules ul li {
-  color: #e9e9e9;
+  color: #bcb8db;
   font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: 10px;
+}
+
+.game-rules ul li i {
+  color: #3c75f9;
+  font-size: 1.25rem;
+  margin-right: 5px;
+}
+
+.question {
+  background-color: #1b1b32;
+  border-radius: 5px;
+  position: relative;
+  width: 100%;
+}
+
+.question h2 {
+  font-size: 25px;
+}
+
+.options {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.options li {
+  background-color: #1b1b32;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 600;
+  margin-top: 15px;
+  padding: 10px;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.options li:hover {
+  background-color: #00001a;
+  transform: scale(1.03);
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 25px;
+}
+
+.buttons button {
+  border: none;
+  border-radius: 5px;
+  color: #bcb8db;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1.7rem;
+  margin-left: 15px;
+  padding: 5px 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.buttons i {
+  margin-right: 3px;
+  font-size: 1.2rem;
+}
+
+.withdraw-btn {
+  background-color: #fe172a80;
+}
+
+.next-btn {
+  background-color: #242440;
+}
+
+.buttons button:hover {
+  opacity: 0.8;
+  transform: scale(1.1);
 }

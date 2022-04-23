@@ -4,8 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Preguntas y respuestas</title>
     <link rel="stylesheet" href="./css/styles.css" />
+    <!-- Icons -->
+    <script src="https://kit.fontawesome.com/ca752d008a.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <div class="container">
@@ -18,28 +20,48 @@
             <button type="submit">Confirmar</button>
           </form>
         </div>
+
         <!-- Empezar juego -->
         <div class="game-start" id="gameStart">
           <h2>¿Quieres empezar a jugar?</h2>
           <button class="button">Empezar</button>
         </div>
+
         <!-- Condiciones del juego -->
-        <div class="game-rules">
+        <div class="game-rules" id="gameRules">
           <h2>Condiciones del juego</h2>
           <ul>
-            <li>* El juego tiene un total de 5 nivéles</li>
-            <li>* La respuesta del nivel en el que se encuentra debe ser correcta para avanzar al siguiente nivel</li>
-            <li>* Cada respuesta correcta suma puntos</li>
-            <li>* La cantidad de puntos otorgados es mayor conforme al nivel en que se encuentra</li>
+            <li><i class="fa-solid fa-angles-right"></i> El juego tiene un total de 5 nivéles</li>
+            <li><i class="fa-solid fa-angles-right"></i> La respuesta del nivel en el que se encuentra debe ser correcta para avanzar al siguiente nivel</li>
+            <li><i class="fa-solid fa-angles-right"></i> Cada respuesta correcta suma puntos</li>
+            <li><i class="fa-solid fa-angles-right"></i> La cantidad de puntos otorgados es mayor conforme al nivel en que se encuentra</li>
             <li>
-              * Tiene la opción de retirarse al terminar cada pregunta. Si se retira voluntariamente guardará sus puntos, si continúa y responde mal, perderá
-              sus puntos acumulados
+              <i class="fa-solid fa-angles-right"></i> Tiene la opción de retirarse al terminar cada pregunta. Si se retira voluntariamente guardará sus puntos,
+              si continúa y responde mal, perderá sus puntos acumulados y se finalizará el juego.
             </li>
             <li>
-                * Al contestar correctamente todas las preguntas, obtendrá el acumulado de puntos que lleve hasta el momento y adicionalmente un premio mayor por ganar el juego.
-              </li>
+              <i class="fa-solid fa-angles-right"></i> Al contestar correctamente todas las preguntas, obtendrá el acumulado de puntos que lleve hasta el
+              momento y adicionalmente un premio mayor por ganar el juego.
+            </li>
           </ul>
           <button class="button">Empezar</button>
+        </div>
+
+        <!-- Juego -->
+        <div class="game">
+          <div class="question">
+            <h2>Preunta</h2>
+          </div>
+          <ul class="options">
+            <li>Opciones de la pregunta</li>
+            <li>Opciones de la pregunta</li>
+            <li>Opciones de la pregunta</li>
+            <li>Opciones de la pregunta</li>
+          </ul>
+          <div class="buttons">
+            <button class="withdraw-btn"><i class="fa-solid fa-reply"></i> Retirarse</button>
+            <button class="next-btn"><i class="fa-solid fa-share"></i> Siguiente</button>
+          </div>
         </div>
       </div>
     </div>
