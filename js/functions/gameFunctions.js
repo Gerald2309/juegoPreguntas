@@ -3,7 +3,7 @@ import { levelOne, levelTwo, levelThree, levelFour, levelFive } from '../questio
 
 // Seleccionar nivel y pregunta
 export const selectQuestion = (level) => {
-  let selectedQuestion = Math.floor(Math.random() * (6 - 1)) + 1;
+  let selectedQuestion = Math.floor(Math.random() * (5 - 0)) + 0;
   let question = {};
 
   switch (level) {
@@ -43,5 +43,34 @@ export const showSelectQuestion = (question) => {
     optionElement.appendChild(optionText);
     questionOptions.appendChild(optionElement);
   });
+
+  let options = document.querySelectorAll('#options li');
+
+  options.forEach((option) => {
+    option.addEventListener('click', () => {
+      checkAnswer(option, question);
+    });
+  });
 };
 
+// Verificar respuesta
+export const checkAnswer = (selectedOption, question) => {
+  let selectedOptionText = selectedOption.textContent;
+  let options = document.querySelectorAll('#options li');
+
+  options.forEach((option) => {
+    option.classList.add('disabled');
+  });
+
+  if (selectedOptionText === question.answer) {
+    selectedOption.classList.add('correct');
+  } else {
+    selectedOption.classList.add('wrong');
+    // Marcar la respuesta es correcta
+    options.forEach((option) => {
+      if (option.textContent === question.answer) {
+        option.classList.add('correct');
+      }
+    });
+  }
+};

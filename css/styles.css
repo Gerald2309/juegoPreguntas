@@ -220,6 +220,21 @@ h2 {
   transform: scale(1.03);
 }
 
+.options li.disabled {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.options li.correct {
+  opacity: 1;
+  background-color: #11f24680;
+}
+
+.options li.wrong {
+  opacity: 1;
+  background-color: #fe172a80;
+}
+
 .buttons {
   display: flex;
   justify-content: flex-end;
