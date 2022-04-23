@@ -1,5 +1,5 @@
 // Importar funciones
-import { savePlayerName, showGameRules, showGameStart } from './functions/gameStartFunctions.js';
+import { savePlayerName, showGameRules, showGameStart } from './functions/gameStartFunction.js';
 import { selectQuestion } from './functions/gameFunctions.js';
 
 //Obtener elementos
