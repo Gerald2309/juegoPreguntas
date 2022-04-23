@@ -19,3 +19,14 @@ export const savePlayerName = (e) => {
     gameRules.classList.add('active');
   };
   
+  // Mostrar el modal de inicio de juego
+  export const showGameStart = () => {
+    let game = document.getElementById('game');
+    let points = document.getElementById('points');
+    let gameRules = document.getElementById('gameRules');
+  
+    gameRules.classList.remove('active');
+    game.classList.add('active');
+    points.classList.add('active');
+  };
+  
